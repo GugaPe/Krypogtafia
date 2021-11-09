@@ -33,9 +33,9 @@ if __name__ == '__main__':
                 break
                 
             elif str(command) == 'LOGIN':
-                client2.send(b'Type login:')
+                client2.send(b'Username:')
                 user = client2.recv(2048).decode()
-                client2.send(b'Type pass:')
+                client2.send(b'Password:')
                 password = client2.recv(2048).decode()
                 
                 if f'user:{user}-password:{password}' in user_list:
