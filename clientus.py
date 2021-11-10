@@ -12,5 +12,6 @@ while True:
     command=input('komenda:')
     s2.send(command.encode())
     response = s2.recv(2048)
+    print(response.decode())
     if response.decode() == 'closing':
         break
